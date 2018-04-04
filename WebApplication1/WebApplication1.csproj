@@ -1,0 +1,258 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B7001D24-0679-4920-B576-6A620B841C10}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication1</RootNamespace>
+    <AssemblyName>WebApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.8.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPage.Master" />
+    <Content Include=".DS_Store" />
+    <Content Include="App_Themes\Theme1\course\plugins\fontawesome-free-5.0.1\webfonts\fa-brands-400.eot" />
+    <Content Include="App_Themes\Theme1\course\plugins\fontawesome-free-5.0.1\webfonts\fa-brands-400.ttf" />
+    <Content Include="App_Themes\Theme1\course\plugins\fontawesome-free-5.0.1\webfonts\fa-brands-400.woff" />
+    <Content Include="App_Themes\Theme1\course\plugins\fontawesome-free-5.0.1\webfonts\fa-brands-400.woff2" />
+    <Content Include="App_Themes\Theme1\course\plugins\fontawesome-free-5.0.1\webfonts\fa-regular-400.eot" />
+    <Content Include="App_Themes\Theme1\course\plugins\fontawesome-free-5.0.1\webfonts\fa-regular-400.ttf" />
+    <Content Include="App_Themes\Theme1\course\plugins\fontawesome-free-5.0.1\webfonts\fa-regular-400.woff" />
+    <Content Include="App_Themes\Theme1\course\plugins\fontawesome-free-5.0.1\webfonts\fa-regular-400.woff2" />
+    <Content Include="App_Themes\Theme1\course\plugins\fontawesome-free-5.0.1\webfonts\fa-solid-900.eot" />
+    <Content Include="App_Themes\Theme1\course\plugins\fontawesome-free-5.0.1\webfonts\fa-solid-900.ttf" />
+    <Content Include="App_Themes\Theme1\course\plugins\fontawesome-free-5.0.1\webfonts\fa-solid-900.woff" />
+    <Content Include="App_Themes\Theme1\course\plugins\fontawesome-free-5.0.1\webfonts\fa-solid-900.woff2" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="contact.html" />
+    <Content Include="courses.html" />
+    <Content Include="elements.html" />
+    <Content Include="App_Themes\Theme1\course\images\author.jpg" />
+    <Content Include="App_Themes\Theme1\course\images\become.jpg" />
+    <Content Include="App_Themes\Theme1\course\images\blackboard.svg" />
+    <Content Include="App_Themes\Theme1\course\images\books.svg" />
+    <Content Include="App_Themes\Theme1\course\images\comment_1.jpg" />
+    <Content Include="App_Themes\Theme1\course\images\comment_2.jpg" />
+    <Content Include="App_Themes\Theme1\course\images\contact_background.jpg" />
+    <Content Include="App_Themes\Theme1\course\images\courses_background.jpg" />
+    <Content Include="App_Themes\Theme1\course\images\course_1.jpg" />
+    <Content Include="App_Themes\Theme1\course\images\course_2.jpg" />
+    <Content Include="App_Themes\Theme1\course\images\course_3.jpg" />
+    <Content Include="App_Themes\Theme1\course\images\course_4.jpg" />
+    <Content Include="App_Themes\Theme1\course\images\course_5.jpg" />
+    <Content Include="App_Themes\Theme1\course\images\course_6.jpg" />
+    <Content Include="App_Themes\Theme1\course\images\course_7.jpg" />
+    <Content Include="App_Themes\Theme1\course\images\course_8.jpg" />
+    <Content Include="App_Themes\Theme1\course\images\course_9.jpg" />
+    <Content Include="App_Themes\Theme1\course\images\earth-globe.svg" />
+    <Content Include="App_Themes\Theme1\course\images\envelope.svg" />
+    <Content Include="App_Themes\Theme1\course\images\event_1.jpg" />
+    <Content Include="App_Themes\Theme1\course\images\event_2.jpg" />
+    <Content Include="App_Themes\Theme1\course\images\event_3.jpg" />
+    <Content Include="App_Themes\Theme1\course\images\exam.svg" />
+    <Content Include="App_Themes\Theme1\course\images\latest_1.jpg" />
+    <Content Include="App_Themes\Theme1\course\images\latest_2.jpg" />
+    <Content Include="App_Themes\Theme1\course\images\latest_3.jpg" />
+    <Content Include="App_Themes\Theme1\course\images\logo.png" />
+    <Content Include="App_Themes\Theme1\course\images\milestones_background.jpg" />
+    <Content Include="App_Themes\Theme1\course\images\milestone_1.svg" />
+    <Content Include="App_Themes\Theme1\course\images\milestone_2.svg" />
+    <Content Include="App_Themes\Theme1\course\images\milestone_3.svg" />
+    <Content Include="App_Themes\Theme1\course\images\milestone_4.svg" />
+    <Content Include="App_Themes\Theme1\course\images\mortarboard.svg" />
+    <Content Include="App_Themes\Theme1\course\images\news_1.jpg" />
+    <Content Include="App_Themes\Theme1\course\images\news_2.jpg" />
+    <Content Include="App_Themes\Theme1\course\images\news_3.jpg" />
+    <Content Include="App_Themes\Theme1\course\images\news_background.jpg" />
+    <Content Include="App_Themes\Theme1\course\images\phone-call.svg" />
+    <Content Include="App_Themes\Theme1\course\images\placeholder.svg" />
+    <Content Include="App_Themes\Theme1\course\images\professor.svg" />
+    <Content Include="App_Themes\Theme1\course\images\search_background.jpg" />
+    <Content Include="App_Themes\Theme1\course\images\slider_background.jpg" />
+    <Content Include="App_Themes\Theme1\course\images\smartphone.svg" />
+    <Content Include="App_Themes\Theme1\course\images\teachers_background.jpg" />
+    <Content Include="App_Themes\Theme1\course\images\teacher_1.jpg" />
+    <Content Include="App_Themes\Theme1\course\images\teacher_2.jpg" />
+    <Content Include="App_Themes\Theme1\course\images\teacher_3.jpg" />
+    <Content Include="App_Themes\Theme1\course\images\teacher_4.jpg" />
+    <Content Include="App_Themes\Theme1\course\images\teacher_5.jpg" />
+    <Content Include="App_Themes\Theme1\course\images\teacher_6.jpg" />
+    <Content Include="App_Themes\Theme1\course\images\testimonials_background.jpg" />
+    <Content Include="App_Themes\Theme1\course\images\testimonials_background_2.jpg" />
+    <Content Include="App_Themes\Theme1\course\images\testimonials_user.jpg" />
+    <Content Include="index.html" />
+    <Content Include="App_Themes\Theme1\course\js\contact_custom.js" />
+    <Content Include="App_Themes\Theme1\course\js\courses_custom.js" />
+    <Content Include="App_Themes\Theme1\course\js\custom.js" />
+    <Content Include="App_Themes\Theme1\course\js\elements_custom.js" />
+    <Content Include="App_Themes\Theme1\course\js\jquery-3.2.1.min.js" />
+    <Content Include="App_Themes\Theme1\course\js\news_custom.js" />
+    <Content Include="App_Themes\Theme1\course\js\news_post_custom.js" />
+    <Content Include="App_Themes\Theme1\course\js\teachers_custom.js" />
+    <Content Include="news.html" />
+    <Content Include="news_post.html" />
+    <Content Include="App_Themes\Theme1\course\plugins\easing\easing.js" />
+    <Content Include="App_Themes\Theme1\course\plugins\fontawesome-free-5.0.1\css\fontawesome-all.css" />
+    <Content Include="App_Themes\Theme1\course\plugins\fontawesome-free-5.0.1\webfonts\fa-brands-400.svg" />
+    <Content Include="App_Themes\Theme1\course\plugins\fontawesome-free-5.0.1\webfonts\fa-regular-400.svg" />
+    <Content Include="App_Themes\Theme1\course\plugins\fontawesome-free-5.0.1\webfonts\fa-solid-900.svg" />
+    <Content Include="App_Themes\Theme1\course\plugins\greensock\animation.gsap.min.js" />
+    <Content Include="App_Themes\Theme1\course\plugins\greensock\ScrollToPlugin.min.js" />
+    <Content Include="App_Themes\Theme1\course\plugins\greensock\TimelineMax.min.js" />
+    <Content Include="App_Themes\Theme1\course\plugins\greensock\TweenMax.min.js" />
+    <Content Include="App_Themes\Theme1\course\plugins\OwlCarousel2-2.2.1\ajax-loader.gif" />
+    <Content Include="App_Themes\Theme1\course\plugins\OwlCarousel2-2.2.1\animate.css" />
+    <Content Include="App_Themes\Theme1\course\plugins\OwlCarousel2-2.2.1\owl.carousel.css" />
+    <Content Include="App_Themes\Theme1\course\plugins\OwlCarousel2-2.2.1\owl.carousel.js" />
+    <Content Include="App_Themes\Theme1\course\plugins\OwlCarousel2-2.2.1\owl.theme.default.css" />
+    <Content Include="App_Themes\Theme1\course\plugins\OwlCarousel2-2.2.1\owl.video.play.png" />
+    <Content Include="App_Themes\Theme1\course\plugins\parallax.js-2.0.0\jquery.parallax.min.js" />
+    <Content Include="App_Themes\Theme1\course\plugins\progressbar\progressbar.min.js" />
+    <Content Include="App_Themes\Theme1\course\plugins\scrollmagic\ScrollMagic.min.js" />
+    <Content Include="App_Themes\Theme1\course\plugins\scrollTo\jquery.scrollTo.min.js" />
+    <Content Include="App_Themes\Theme1\course\styles\bootstrap4\bootstrap.min.css" />
+    <Content Include="App_Themes\Theme1\course\styles\bootstrap4\bootstrap.min.js" />
+    <Content Include="App_Themes\Theme1\course\styles\bootstrap4\popper.js" />
+    <Content Include="App_Themes\Theme1\course\styles\contact_responsive.css" />
+    <Content Include="App_Themes\Theme1\course\styles\contact_styles.css" />
+    <Content Include="App_Themes\Theme1\course\styles\courses_responsive.css" />
+    <Content Include="App_Themes\Theme1\course\styles\courses_styles.css" />
+    <Content Include="App_Themes\Theme1\course\styles\elements_responsive.css" />
+    <Content Include="App_Themes\Theme1\course\styles\elements_styles.css" />
+    <Content Include="App_Themes\Theme1\course\styles\main_styles.css" />
+    <Content Include="App_Themes\Theme1\course\styles\news_post_responsive.css" />
+    <Content Include="App_Themes\Theme1\course\styles\news_post_styles.css" />
+    <Content Include="App_Themes\Theme1\course\styles\news_responsive.css" />
+    <Content Include="App_Themes\Theme1\course\styles\news_styles.css" />
+    <Content Include="App_Themes\Theme1\course\styles\responsive.css" />
+    <Content Include="App_Themes\Theme1\course\styles\teachers_responsive.css" />
+    <Content Include="App_Themes\Theme1\course\styles\teachers_styles.css" />
+    <Content Include="teachers.html" />
+    <Content Include="Default.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63157</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:63157/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
